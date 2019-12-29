@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <h1> {{title}}  </h1>
+</head>
+<body>
+    
+
+<form action="/products/createform" method="POST" >
+  <div class="form-row">
+    <div class="col">
+      <h2> name </h2>
+      <input type="text" class="form-control" name='name' placeholder="name" required>
+    </div>
+    <br>
+    <div class="col">
+       <h2> address </h2>
+      <input type="text" class="form-control" name='address' placeholder="Address" required>
+    </div>
+<br>
+    <div class="col">
+       <h2> price </h2>
+      <input type="text" class="form-control" name = 'price' placeholder="price" required>
+    </div>
+    <br>
+    <button> ADD ITEMS </button>
+  </div>
+</form>
+
+</body>
+</html>

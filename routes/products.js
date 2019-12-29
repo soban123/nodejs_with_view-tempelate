@@ -6,10 +6,10 @@ var db = require('../db')
     var query = "select * from products  "
 
     db.query(query , function ( err , rows , fields ){
-        // res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
-        // res.json(rows)
+        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
+        res.json(rows)
       
-        res.render('products' , {title: 'products' , data : rows} )
+        // res.render('produScts' , {title: 'products' , data : rows} )
     })
 } )
 

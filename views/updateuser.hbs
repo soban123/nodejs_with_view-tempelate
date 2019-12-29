@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <h1> {{title}}  </h1>
+</head>
+<body>
+    
+
+<form action="/user/update/{{data.id}}" method="POST" class="form-group" >
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" value={{data.name}} name="name" />
+    </div>
+    <br>
+    <div class="col">
+      <input type="text" class="form-control" name='email' value={{data.email}} placeholder="email">
+    </div>
+
+     <br>
+    <div class="col">
+      <input type="text" class="form-control" name='status' value={{data.status}} placeholder="status">
+    </div>
+
+    
+
+<br>
+    <div class="col">
+      <input type="text" class="form-control" name = 'phone' value={{data.phone}} placeholder="phone">
+    </div>
+
+     <br>
+    <div class="col">
+      <input type="text" class="form-control" name='year' value={{data.year}} placeholder="status">
+    </div>
+    <br>
+
+    <button> update user </button>
+  </div>
+</form>
+
+</body>
+</html>

@@ -32,7 +32,7 @@ router.post('/upload' ,  upload.single("file")   ,  function(req , res ,next){
     var fileinfo = req.file ;
     var title = req.body.file_name ;
     console.log(title);
-    res.send(fileinfo) ;
+    res.redirect('/blog/create');
     // console.log(fileinfo) ;
 
     
@@ -43,7 +43,7 @@ router.post('/uploads' ,  upload.array("file" , 3)   ,  function(req , res ,next
     var fileinfo = req.files;
     var title = req.body.file_name ;
     console.log(title);
-    res.send(fileinfo) ;
+    res.redirect('/blog/create');
     // console.log(fileinfo) ;
 
     

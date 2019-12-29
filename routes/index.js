@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var db = require('../db')
+var db = require('../db') ;
+var isauth = 0 ;
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('form', { title: 'EXPRESS LOGIN ' });
@@ -12,7 +13,8 @@ router.get('/student/:email/:password', function(req, res, next) {
 });
 
 router.get('/logedin', function(req, res, next) {
-  res.render( 'adminpannel' , { title: 'ADMIN PANEL'   });
+  // if (isauth) {
+  res.render( 'adminpannel' , { title: 'ADMIN PANEL'   }); 
   // res.json(req.params) ;
 });
 
@@ -30,6 +32,7 @@ var e ='soban12@gmail.com' ;
 
     
     if (email == rows[0].email  && pass == rows[0].password ){
+      isauth = 1 ;
       res.redirect('/logedin' ) 
       
       }

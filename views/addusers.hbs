@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <h1> {{title}}  </h1>
+</head>
+<body>
+    
+
+<form action="/user/adduser" method="POST" >
+  <div class="form-row">
+    <div class="col">
+      <h2> name  </h2>
+      <input type="text" class="form-control" name="name" placeholder="Name" required>
+    </div>
+    <br>
+    <div class="col">
+         <h2> email </h2>
+      <input type="text" class="form-control" name='email' placeholder="exam@g.com" required>
+    </div>
+    <br>
+    <div class="col">
+         <h2> status </h2>
+      <input type="text" class="form-control" name ='status' placeholder="admin/user" required>
+    </div>
+<br>
+    <div class="col">
+         <h2> phone  </h2>
+      <input type="text" class="form-control" name ='phone' placeholder="03xxxxxx" required>
+    </div>
+
+
+    <br>
+      <div class="col">
+         <h2> year </h2>
+      <input type="text" class="form-control" name='year' placeholder="year" required>
+    </div>
+<br>
+    <button> ADD ITEMS </button>
+  </div>
+</form>
+
+</body>
+</html>

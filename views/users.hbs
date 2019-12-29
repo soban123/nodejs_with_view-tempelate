@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+<a href="/logedin"  class="btn btn-danger">  HOME  </a>
+
+   <link rel='stylesheet' href='../public/stylesheets/style.css' />
+    <h1>  {{title}}  </h1>
+
+</head>
+<body>
+
+<a href="/user/adduser"  class="btn btn-success">  ADD USER </a>
+
+    <table  class="table"> 
+
+        <th> name </th>
+        <th> email </th>
+        <th> status </th>
+         <th> phone </th>
+          <th> year </th>
+        
+
+{{#each data}}
+
+        <tr>
+        
+        <td> {{this.name}}  </td>
+        <td> {{this.email}}  </td>
+        <td> {{this.status}}  </td>
+        <td> {{this.phone}}  </td>
+        <td> {{this.year}}  </td>
+        <td> 
+            <a href="/user/update/{{this.id}}"  class="btn btn-success" > edit </a>
+            <a href="/user/delete/{{this.id}}"  class="btn btn-danger" > delete </a>
+              </td>
+        </tr>
+
+{{/each}}
+
+    </table>
+    
+    
+    
+</body>
+</html>
